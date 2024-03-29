@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+		.column {
+			/*flex: 50%;*/
+			height: 600px;
+			padding: 10px;
+			margin: 5px;
+			background-color: #cccccc;
+			/*text-align: center;*/
+		}
+		
+		.container {
+			/*display: flex;*/
+			display: grid;
+			grid-template-columns: 200px 600px; 
+			text-align: center;
+		}
+		
+		.viewer {
+			width: 500px;
+			height: 500px;
+		}
+	
+    </style>
+    <meta charset="UTF-8">
+    <title>Test Model Viewer</title>
+</head>
+<body>
+	<h2>Test Model Viewer</h2>
+	<div class="container">
+		<div class="column"></div>
+		<div class="column">
+			<!-- Import the component -->
+			<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+			<!-- Use it like any other HTML element -->
+			<model-viewer class="viewer" style="" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr" poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+		</div>
+	</div>
+</body>
+</html>
