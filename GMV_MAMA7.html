@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+		.column {
+			/*flex: 50%;*/
+			height: 600px;
+			padding: 10px;
+			margin: 5px;
+			background-color: #cccccc;
+			/*text-align: center;*/
+		}
+		
+		.container {
+			/*display: flex;*/
+			display: grid;
+			grid-template-columns: 200px 600px; 
+			text-align: center;
+		}
+		
+		.viewer {
+			width: 500px;
+			height: 500px;
+		}
+	
+    </style>
+    <meta charset="UTF-8">
+    <title>Test Model Viewer</title>
+</head>
+<body>
+	<h2>Maison Jean</h2>
+	<div class="container">
+		<div class="column">
+		 <p>Construction: Charpente Bois Massif</p>
+		 <p>Ann&eacute;e: 2023</p>
+		 <p>Emplacement: Hatley</p>		 
+		</div>
+		<div class="column">
+			<!-- Import the component -->
+			<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+			<!-- Use it like any other HTML element -->
+			<!-- https://drive.google.com/file/d/1S4l-gzpWKeD-ktzPvuD-e1zIkrrTllME/view?usp=sharing -->
+			<!-- ./2024-03-29.gltf -->
+			<model-viewer 	class="viewer" 
+							alt="Maison Gérald Jean" 
+							src=".\gj_house.glb" 
+							ar 
+							shadow-intensity="1"
+							auto-rotate							
+							camera-controls
+							tone-mapping="commerce"
+							touch-action="pan-y">
+			</model-viewer>
+		</div>
+	</div>
+</body>
+</html>
